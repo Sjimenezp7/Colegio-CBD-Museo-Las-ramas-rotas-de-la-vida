@@ -9,7 +9,7 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #e9f5db; /* Fondo suave */
         }
         header {
             background-image: url('https://github.com/Sjimenezp7/Colegio-CBD-Museo-Las-ramas-rotas-de-la-vida/blob/main/image.png?raw=true');
@@ -28,11 +28,13 @@
             font-size: 4rem;
             margin: 0;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            animation: fadeIn 2s ease-out;
         }
         h2 {
             font-size: 2rem;
             margin-top: 0.5rem;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+            animation: fadeIn 2s ease-out;
         }
         section {
             padding: 2rem;
@@ -41,8 +43,9 @@
             margin-top: 1rem;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: slideUp 1s ease-out;
         }
-        .button {
+        .button, .animal-link {
             background-color: #007BFF;
             color: white;
             padding: 1rem 2rem;
@@ -54,7 +57,7 @@
             display: inline-block;
             transition: background-color 0.3s ease;
         }
-        .button:hover {
+        .button:hover, .animal-link:hover {
             background-color: #0056b3;
         }
         .video-section {
@@ -69,6 +72,7 @@
             margin: 10px 0;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            animation: slideUp 1s ease-out;
         }
         .animal-link {
             background-color: #28a745;
@@ -82,6 +86,15 @@
         .animal-link:hover {
             background-color: #218838;
             transform: scale(1.05);
+        }
+        /* Animaciones */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
         @media (max-width: 768px) {
             h1 {
