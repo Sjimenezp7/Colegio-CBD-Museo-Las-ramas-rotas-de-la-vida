@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Museo Las Ramas Rotas de la Vida</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #e9f5db; /* Fondo suave */
+            background-color: #e9f5db;
         }
         header {
             background-image: url('https://github.com/Sjimenezp7/Colegio-CBD-Museo-Las-ramas-rotas-de-la-vida/blob/main/image.png?raw=true');
@@ -28,13 +29,13 @@
             font-size: 4rem;
             margin: 0;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-            animation: fadeIn 2s ease-out;
+            font-family: 'Montserrat', sans-serif;
+            animation: float 2s ease-in-out infinite;
         }
         h2 {
             font-size: 2rem;
             margin-top: 0.5rem;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-            animation: fadeIn 2s ease-out;
         }
         section {
             padding: 2rem;
@@ -88,9 +89,9 @@
             transform: scale(1.05);
         }
         /* Animaciones */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
         }
         @keyframes slideUp {
             from { transform: translateY(20px); opacity: 0; }
