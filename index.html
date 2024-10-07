@@ -12,7 +12,7 @@
             background-color: #f4f4f4;
         }
         header {
-            background-image: url('https://github.com/Sjimenezp7/Colegio-CBD-Museo-Las-ramas-rotas-de-la-vida/blob/main/image.png?raw=true'); /* Reemplaza con la URL de tu imagen */
+            background-image: url('ruta_de_tu_imagen'); /* Reemplaza con la URL de tu imagen */
             background-size: cover;
             background-position: center;
             height: 80vh;
@@ -51,6 +51,31 @@
         .button:hover {
             background-color: #0056b3;
         }
+        .animal-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .animal-card {
+            background-color: white;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            text-align: center;
+            width: 200px;
+        }
+        .animal-card img {
+            border-radius: 10px;
+            width: 100%;
+            height: auto;
+        }
+        .video-section video {
+            width: 80%;
+            max-width: 600px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body>
@@ -63,13 +88,34 @@
 <section>
     <h3>Información del Museo</h3>
     <p>Descubre más sobre el Museo y su enfoque en la vida silvestre.</p>
-    <a href="#" class="button">Leer más</a>
+    <!-- Video de información del museo -->
+    <div class="video-section">
+        <video controls>
+            <source src="ruta_de_tu_video_1" type="video/mp4">
+            Tu navegador no soporta video HTML5.
+        </video>
+    </div>
 </section>
 
 <section>
     <h3>Fichas Técnicas de los Animales</h3>
     <p>Pronto podrás consultar las fichas técnicas de cada especie presentada en el museo.</p>
-    <a href="#" class="button">Ver más</a>
+    <!-- Galería de animales -->
+    <div class="animal-grid">
+        <!-- Tarjeta de ejemplo para el oso de anteojos -->
+        <div class="animal-card">
+            <img src="ruta_de_imagen_osito" alt="Oso de Anteojos">
+            <h4>Oso de Anteojos</h4>
+            <a href="#" class="button">Ver ficha</a>
+        </div>
+        <!-- Añade más tarjetas aquí para cada animal -->
+        <div class="animal-card">
+            <img src="ruta_de_imagen_tortuga" alt="Tortuga Verde">
+            <h4>Tortuga Verde</h4>
+            <a href="#" class="button">Ver ficha</a>
+        </div>
+        <!-- Continúa agregando más tarjetas según tus animales -->
+    </div>
 </section>
 
 </body>
