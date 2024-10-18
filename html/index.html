@@ -36,9 +36,10 @@
             animation: float 2s ease-in-out infinite;
         }
         h2 {
-            font-size: 2rem;
+            font-size: 2.5rem; /* Incremento del tamaño */
             margin-top: 0.5rem;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+            animation: float 2s ease-in-out infinite; /* Animación agregada */
         }
         section {
             padding: 2rem;
@@ -53,36 +54,24 @@
         }
         h3 {
             font-family: 'Pacifico', cursive;
+            font-size: 2.2rem; /* Incremento del tamaño */
             text-align: center; /* Centramos el título */
+            animation: float 2s ease-in-out infinite; /* Animación agregada */
         }
         .button, .animal-link {
             background-color: #007BFF;
             color: white;
             padding: 1rem 2rem;
-            border: none;
             border-radius: 5px;
             text-decoration: none;
             font-size: 1.2rem;
             margin: 1rem;
             display: inline-block;
             transition: background-color 0.3s ease;
+            text-align: center;
         }
         .button:hover, .animal-link:hover {
             background-color: #0056b3;
-        }
-        .video-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .video-section iframe {
-            width: 100%;
-            max-width: 600px;
-            height: 338px;
-            margin: 10px 0;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            animation: slideUp 1s ease-out;
         }
         .animal-link {
             background-color: #28a745;
@@ -96,6 +85,13 @@
         .animal-link:hover {
             background-color: #218838;
             transform: scale(1.05);
+        }
+        /* Centramos el botón de fichas técnicas */
+        .animal-link {
+            display: block;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
         }
         /* Animaciones */
         @keyframes float {
@@ -111,7 +107,7 @@
                 font-size: 3rem;
             }
             h2 {
-                font-size: 1.5rem;
+                font-size: 2rem; /* Ajuste en móviles */
             }
         }
     </style>
@@ -146,9 +142,9 @@
 
 <section>
     <h3>¿Te gustaría conocer más sobre los animales?</h3>
-    <p>Descubre información fascinante sobre las especies, sus hábitats, qué les gusta comer y mucho más. ¡Acompáñanos en este viaje para aprender más sobre los animales que nos rodean y su importancia para el ecosistema!</p>
+    <p>Descubre información fascinante sobre las especies, sus hábitats, sus características y mucho más. ¡Acompáñanos en este viaje para aprender más sobre los animales que nos rodean y su importancia para el ecosistema!</p>
     <!-- Botón para redirigir a la página de las fichas -->
-    <a href="fichas-tecnicas.html" class="animal-link">Ver Fichas Técnicas</a>
+    <a href="fichas-tecnicas.html" class="animal-link">Ver más sobre los animales</a>
 </section>
 
 </body>
