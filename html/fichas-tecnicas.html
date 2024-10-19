@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -78,18 +79,27 @@
         .back-button:hover {
             background-color: #218838;
         }
-        .info-text {
+
+        /* Estilo para los párrafos alineados a los lados de la imagen */
+        .info-container {
             display: flex;
             justify-content: space-between;
+            align-items: center;
+            gap: 20px;
             margin-top: 2rem;
             padding: 1rem;
             background-color: rgba(255, 255, 255, 0.9);
             border-radius: 10px;
         }
-        .left-text, .right-text {
+        .info-container div {
             width: 45%;
             text-align: justify;
         }
+        .info-container img {
+            width: 300px;
+            border-radius: 10px;
+        }
+
         @keyframes float {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-10px); }
@@ -101,8 +111,7 @@
 <header>
     <h1>Fichas Técnicas de Animales en Extinción</h1>
 </header>
-
-
+    
 <div class="animal-grid">
     <div class="animal-card">
         <img src="https://github.com/Sjimenezp7/Colegio-CBD-Museo-Las-ramas-rotas-de-la-vida/blob/main/imagenes/oso%20anteojos.jpg?raw=true" alt="Oso de Anteojos">
@@ -186,12 +195,13 @@
     </div>
 </div>
 
-<!-- Añadir párrafos a ambos lados de la ficha del águila -->
-<div class="info-text">
-    <div class="left-text">
+<!-- Contenedor con los textos a los lados de la imagen del águila -->
+<div class="info-container">
+    <div>
         <p>El museo “Las Ramas Rotas de la Vida” es un espacio dedicado a la creación artística de fauna y flora mediante el uso de materiales reciclables. Este proyecto educativo, liderado por docentes y estudiantes de la Institución Educativa Confederación Brisas del Diamante de Ciudad Bolívar en Bogotá, ha sido una plataforma para concientizar sobre la importancia del reciclaje y el cuidado del medio ambiente. A lo largo de seis años, los estudiantes han creado diversas esculturas de especies silvestres que forman parte de este museo itinerante, destacando el valor de las áreas protegidas y el respeto por la biodiversidad.</p>
     </div>
-    <div class="right-text">
+    <img src="https://github.com/Sjimenezp7/Colegio-CBD-Museo-Las-ramas-rotas-de-la-vida/blob/main/imagenes/aguila.jpg?raw=true" alt="Águila Solitaria">
+    <div>
         <p>Gracias a talleres de interpretación ambiental, los jóvenes han fortalecido sus conocimientos sobre los ecosistemas marinos y terrestres, enfocándose en nuevas esculturas que representan la fauna y flora de estos hábitats. Estas actividades han contribuido a la concienciación sobre la conservación de la naturaleza y han fortalecido el vínculo de la comunidad educativa con la protección de los recursos naturales, promoviendo la sostenibilidad a través del arte y el reciclaje.</p>
     </div>
 </div>
