@@ -23,6 +23,7 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             margin-bottom: 1rem;
+            animation: float 2s ease-in-out infinite;
         }
         h1 {
             font-family: 'Montserrat', sans-serif;
@@ -77,6 +78,22 @@
         .back-button:hover {
             background-color: #218838;
         }
+        .info-text {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+            padding: 1rem;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+        }
+        .left-text, .right-text {
+            width: 45%;
+            text-align: justify;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
     </style>
 </head>
 <body>
@@ -84,6 +101,8 @@
 <header>
     <h1>Fichas Técnicas de Animales en Extinción</h1>
 </header>
+
+
 <div class="animal-grid">
     <div class="animal-card">
         <img src="https://github.com/Sjimenezp7/Colegio-CBD-Museo-Las-ramas-rotas-de-la-vida/blob/main/imagenes/oso%20anteojos.jpg?raw=true" alt="Oso de Anteojos">
@@ -121,7 +140,7 @@
         <a href="Lagarto punteado.html" class="button">Ver más</a>
     </div>
     <div class="animal-card">
-        <img src="https://github.com/Sjimenezp7/Colegio-CBD-Museo-Las-ramas-rotas-de-la-vida/blob/main/imagenes/pato%20zambullidor.jpg?raw=true" alt="Pato Zambullidor Cira">
+        <img src="https://raw.githubusercontent.com/Sjimenezp7/Colegio-CBD-Museo-Las-ramas-rotas-de-la-vida/refs/heads/main/imagenes/pato%20zambullidor.avif" alt="Pato Zambullidor Cira">
         <h4>Pato Zambullidor Cira</h4>
         <a href="Pato Zambullidor.html" class="button">Ver más</a>
     </div>
@@ -167,9 +186,18 @@
     </div>
 </div>
 
+<!-- Añadir párrafos a ambos lados de la ficha del águila -->
+<div class="info-text">
+    <div class="left-text">
+        <p>El museo “Las Ramas Rotas de la Vida” es un espacio dedicado a la creación artística de fauna y flora mediante el uso de materiales reciclables. Este proyecto educativo, liderado por docentes y estudiantes de la Institución Educativa Confederación Brisas del Diamante de Ciudad Bolívar en Bogotá, ha sido una plataforma para concientizar sobre la importancia del reciclaje y el cuidado del medio ambiente. A lo largo de seis años, los estudiantes han creado diversas esculturas de especies silvestres que forman parte de este museo itinerante, destacando el valor de las áreas protegidas y el respeto por la biodiversidad.</p>
+    </div>
+    <div class="right-text">
+        <p>Gracias a talleres de interpretación ambiental, los jóvenes han fortalecido sus conocimientos sobre los ecosistemas marinos y terrestres, enfocándose en nuevas esculturas que representan la fauna y flora de estos hábitats. Estas actividades han contribuido a la concienciación sobre la conservación de la naturaleza y han fortalecido el vínculo de la comunidad educativa con la protección de los recursos naturales, promoviendo la sostenibilidad a través del arte y el reciclaje.</p>
+    </div>
+</div>
+
 <!-- Botón de regreso a la página principal -->
 <a href="index.html" class="back-button">Volver al Inicio</a>
 
 </body>
 </html>
-
