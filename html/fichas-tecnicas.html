@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -50,14 +49,35 @@
         .animal-card:hover {
             transform: scale(1.05);
         }
-        .animal-card img {
-            border-radius: 10px;
-            width: 100%;
-            height: auto;
-        }
         .animal-card h4 {
             margin-top: 0.5rem;
             font-family: 'Montserrat', sans-serif;
+        }
+        /* Carrusel de imágenes */
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .mySlides {
+            display: none;
+        }
+        .mySlides img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        /* Animación para las imágenes */
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+        @keyframes fade {
+            from {opacity: 0.4}
+            to {opacity: 1}
         }
         .button, .back-button {
             background-color: #007BFF;
@@ -79,31 +99,6 @@
         .back-button:hover {
             background-color: #218838;
         }
-
-        /* Estilo para los párrafos alineados a los lados de la imagen */
-        .info-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 20px;
-            margin-top: 2rem;
-            padding: 1rem;
-            background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 10px;
-        }
-        .info-container div {
-            width: 45%;
-            text-align: justify;
-        }
-        .info-container img {
-            width: 300px;
-            border-radius: 10px;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
     </style>
 </head>
 <body>
@@ -111,87 +106,230 @@
 <header>
     <h1>Fichas Técnicas de Animales en Extinción</h1>
 </header>
-    
+
 <div class="animal-grid">
+    <!-- Ficha Técnica 1: Oso de Anteojos -->
     <div class="animal-card">
-        <img src="https://github.com/Sjimenezp7/Colegio-CBD-Museo-Las-ramas-rotas-de-la-vida/blob/main/imagenes/oso%20anteojos.jpg?raw=true" alt="Oso de Anteojos">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="URL_IMAGEN_REAL_OSO_ANTEOJOS" alt="Oso de Anteojos Real">
+            </div>
+            <div class="mySlides fade">
+                <img src="https://github.com/Sjimenezp7/Colegio-CBD-Museo-Las-ramas-rotas-de-la-vida/blob/main/imagenes/oso_reciclado.jpg?raw=true" alt="Oso de Anteojos Reciclado">
+            </div>
+        </div>
         <h4>Oso de Anteojos</h4>
         <a href="oso-de-anteojos.html" class="button">Ver más</a>
     </div>
+
+    <!-- Ficha Técnica 2: Oso Polar -->
     <div class="animal-card">
-        <img src="https://github.com/Sjimenezp7/Colegio-CBD-Museo-Las-ramas-rotas-de-la-vida/blob/main/imagenes/oso%20polar.jpg?raw=true" alt="Oso Polar">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="URL_IMAGEN_REAL_OSO_POLAR" alt="Oso Polar Real">
+            </div>
+            <div class="mySlides fade">
+                <img src="https://github.com/Sjimenezp7/Colegio-CBD-Museo-Las-ramas-rotas-de-la-vida/blob/main/imagenes/oso_polar_reciclado.jpg?raw=true" alt="Oso Polar Reciclado">
+            </div>
+        </div>
         <h4>Oso Polar</h4>
         <a href="oso-polar.html" class="button">Ver más</a>
     </div>
+
+    <!-- Ficha Técnica 3: Anaconda -->
     <div class="animal-card">
-        <img src="https://github.com/Sjimenezp7/Colegio-CBD-Museo-Las-ramas-rotas-de-la-vida/blob/main/imagenes/anaconda.jpg?raw=true" alt="Anaconda">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="URL_IMAGEN_REAL_ANACONDA" alt="Anaconda Real">
+            </div>
+            <div class="mySlides fade">
+                <img src="https://github.com/Sjimenezp7/Colegio-CBD-Museo-Las-ramas-rotas-de-la-vida/blob/main/imagenes/anaconda_reciclada.jpg?raw=true" alt="Anaconda Reciclada">
+            </div>
+        </div>
         <h4>Anaconda</h4>
         <a href="anaconda.html" class="button">Ver más</a>
     </div>
+
+    <!-- Ficha Técnica 4: Tiburón Martillo -->
     <div class="animal-card">
-        <img src="https://github.com/Sjimenezp7/Colegio-CBD-Museo-Las-ramas-rotas-de-la-vida/blob/main/imagenes/tiburon.jpg?raw=true" alt="Tiburón Martillo">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="URL_IMAGEN_REAL_TIBURON_MARTILLO" alt="Tiburón Martillo Real">
+            </div>
+            <div class="mySlides fade">
+                <img src="https://github.com/Sjimenezp7/Colegio-CBD-Museo-Las-ramas-rotas-de-la-vida/blob/main/imagenes/tiburon_reciclado.jpg?raw=true" alt="Tiburón Martillo Reciclado">
+            </div>
+        </div>
         <h4>Tiburón Martillo</h4>
-        <a href="tiburon martillo.html" class="button">Ver más</a>
+        <a href="tiburon-martillo.html" class="button">Ver más</a>
     </div>
+
+    <!-- Ficha Técnica 5: Tortuga Verde -->
     <div class="animal-card">
-        <img src="https://github.com/Sjimenezp7/Colegio-CBD-Museo-Las-ramas-rotas-de-la-vida/blob/main/imagenes/tortuga.jpg?raw=true" alt="Tortuga Verde">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="URL_IMAGEN_REAL_TORTUGA_VERDE" alt="Tortuga Verde Real">
+            </div>
+            <div class="mySlides fade">
+                <img src="https://github.com/Sjimenezp7/Colegio-CBD-Museo-Las-ramas-rotas-de-la-vida/blob/main/imagenes/tortuga_reciclada.jpg?raw=true" alt="Tortuga Verde Reciclada">
+            </div>
+        </div>
         <h4>Tortuga Verde</h4>
-        <a href="tortuga verde.html" class="button">Ver más</a>
+        <a href="tortuga-verde.html" class="button">Ver más</a>
     </div>
+
+    <!-- Ficha Técnica 6: Piquero de Nazca -->
     <div class="animal-card">
-        <img src="https://github.com/Sjimenezp7/Colegio-CBD-Museo-Las-ramas-rotas-de-la-vida/blob/main/imagenes/piquero.jpg?raw=true" alt="Piquero de Nazca">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="URL_IMAGEN_REAL_PIQUERO_NAZCA" alt="Piquero de Nazca Real">
+            </div>
+            <div class="mySlides fade">
+                <img src="https://github.com/Sjimenezp7/Colegio-CBD-Museo-Las-ramas-rotas-de-la-vida/blob/main/imagenes/piquero_reciclado.jpg?raw=true" alt="Piquero de Nazca Reciclado">
+            </div>
+        </div>
         <h4>Piquero de Nazca</h4>
-        <a href="piquero de nazca.html" class="button">Ver más</a>
+        <a href="piquero-de-nazca.html" class="button">Ver más</a>
     </div>
+
+    <!-- Ficha Técnica 7: Lagarto Punteado de Mal Pelo -->
     <div class="animal-card">
-        <img src="https://github.com/Sjimenezp7/Colegio-CBD-Museo-Las-ramas-rotas-de-la-vida/blob/main/imagenes/lagarto.jpg?raw=true" alt="Lagarto Punteado de Mal Pelo">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="URL_IMAGEN_REAL_LAGARTO_MAL_PELO" alt="Lagarto Punteado de Mal Pelo Real">
+            </div>
+            <div class="mySlides fade">
+                <img src="https://github.com/Sjimenezp7/Colegio-CBD-Museo-Las-ramas-rotas-de-la-vida/blob/main/imagenes/lagarto_reciclado.jpg?raw=true" alt="Lagarto Punteado de Mal Pelo Reciclado">
+            </div>
+        </div>
         <h4>Lagarto Punteado de Mal Pelo</h4>
-        <a href="Lagarto punteado.html" class="button">Ver más</a>
+        <a href="lagarto-punteado.html" class="button">Ver más</a>
     </div>
+
+    <!-- Ficha Técnica 8: Pato Zambullidor Cira -->
     <div class="animal-card">
-        <img src="https://github.com/Sjimenezp7/Colegio-CBD-Museo-Las-ramas-rotas-de-la-vida/blob/main/imagenes/pato%20zambullidor.jpg?raw=true" alt="Pato Zambullidor Cira">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="URL_IMAGEN_REAL_PATO_ZAMBULLIDOR_CIRA" alt="Pato Zambullidor Cira Real">
+            </div>
+            <div class="mySlides fade">
+                <img src="https://github.com/Sjimenezp7/Colegio-CBD-Museo-Las-ramas-rotas-de-la-vida/blob/main/imagenes/pato_zambullidor_reciclado.jpg?raw=true" alt="Pato Zambullidor Cira Reciclado">
+            </div>
+        </div>
         <h4>Pato Zambullidor Cira</h4>
-        <a href="Pato Zambullidor.html" class="button">Ver más</a>
+        <a href="pato-zambullidor.html" class="button">Ver más</a>
     </div>
+
+    <!-- Ficha Técnica 9: Pato Turrio o Pico Azul -->
     <div class="animal-card">
-        <img src="https://github.com/Sjimenezp7/Colegio-CBD-Museo-Las-ramas-rotas-de-la-vida/blob/main/imagenes/pato%20turrio.jpg?raw=true" alt="Pato Turio o Pico Azul">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="URL_IMAGEN_REAL_PATO_TURRIO" alt="Pato Turrio o Pico Azul Real">
+            </div>
+            <div class="mySlides fade">
+                <img src="https://github.com/Sjimenezp7/Colegio-CBD-Museo-Las-ramas-rotas-de-la-vida/blob/main/imagenes/pato_turrio_reciclado.jpg?raw=true" alt="Pato Turrio o Pico Azul Reciclado">
+            </div>
+        </div>
         <h4>Pato Turrio o Pico Azul</h4>
-        <a href="Pato turrio.html" class="button">Ver más</a>
+        <a href="pato-turrio.html" class="button">Ver más</a>
     </div>
+
+    <!-- Ficha Técnica 10: Tingua Azul -->
     <div class="animal-card">
-        <img src="https://github.com/Sjimenezp7/Colegio-CBD-Museo-Las-ramas-rotas-de-la-vida/blob/main/imagenes/tingua.jpg?raw=true" alt="Tingua Azul">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="URL_IMAGEN_REAL_TINGUA_AZUL" alt="Tingua Azul Real">
+            </div>
+            <div class="mySlides fade">
+                <img src="https://github.com/Sjimenezp7/Colegio-CBD-Museo-Las-ramas-rotas-de-la-vida/blob/main/imagenes/tingua_reciclada.jpg?raw=true" alt="Tingua Azul Reciclada">
+            </div>
+        </div>
         <h4>Tingua Azul</h4>
-        <a href="Tingua azul.html" class="button">Ver más</a>
+        <a href="tingua-azul.html" class="button">Ver más</a>
     </div>
+
+    <!-- Ficha Técnica 11: Gavilán Maromero -->
     <div class="animal-card">
-        <img src="https://github.com/Sjimenezp7/Colegio-CBD-Museo-Las-ramas-rotas-de-la-vida/blob/main/imagenes/gavilan.jpg?raw=true" alt="Gavilán Maromero">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="URL_IMAGEN_REAL_GAVILAN_MAROMERO" alt="Gavilán Maromero Real">
+            </div>
+            <div class="mySlides fade">
+                <img src="https://github.com/Sjimenezp7/Colegio-CBD-Museo-Las-ramas-rotas-de-la-vida/blob/main/imagenes/gavilan_reciclado.jpg?raw=true" alt="Gavilán Maromero Reciclado">
+            </div>
+        </div>
         <h4>Gavilán Maromero</h4>
-        <a href="Gavilan maromero.html" class="button">Ver más</a>
+        <a href="gavilan-maromero.html" class="button">Ver más</a>
     </div>
+
+    <!-- Ficha Técnica 12: Rinoceronte Blanco -->
     <div class="animal-card">
-        <img src="https://github.com/Sjimenezp7/Colegio-CBD-Museo-Las-ramas-rotas-de-la-vida/blob/main/imagenes/rinoceronte.jpg?raw=true" alt="Rinoceronte Blanco">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="URL_IMAGEN_REAL_RINOCERONTE_BLANCO" alt="Rinoceronte Blanco Real">
+            </div>
+            <div class="mySlides fade">
+                <img src="https://github.com/Sjimenezp7/Colegio-CBD-Museo-Las-ramas-rotas-de-la-vida/blob/main/imagenes/rinoceronte_reciclado.jpg?raw=true" alt="Rinoceronte Blanco Reciclado">
+            </div>
+        </div>
         <h4>Rinoceronte Blanco</h4>
-        <a href="Rinoceronte blanco.html" class="button">Ver más</a>
+        <a href="rinoceronte-blanco.html" class="button">Ver más</a>
     </div>
+
+    <!-- Ficha Técnica 13: Morena Verde -->
     <div class="animal-card">
-        <img src="https://github.com/Sjimenezp7/Colegio-CBD-Museo-Las-ramas-rotas-de-la-vida/blob/main/imagenes/morena%20verde.jpg?raw=true" alt="Morena Verde">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="URL_IMAGEN_REAL_MORENA_VERDE" alt="Morena Verde Real">
+            </div>
+            <div class="mySlides fade">
+                <img src="https://github.com/Sjimenezp7/Colegio-CBD-Museo-Las-ramas-rotas-de-la-vida/blob/main/imagenes/morena_verde_reciclada.jpg?raw=true" alt="Morena Verde Reciclada">
+            </div>
+        </div>
         <h4>Morena Verde</h4>
-        <a href="Morena verde.html" class="button">Ver más</a>
+        <a href="morena-verde.html" class="button">Ver más</a>
     </div>
+
+    <!-- Ficha Técnica 14: Morena Cebra -->
     <div class="animal-card">
-        <img src="https://github.com/Sjimenezp7/Colegio-CBD-Museo-Las-ramas-rotas-de-la-vida/blob/main/imagenes/morena%20cebra.jpg?raw=true" alt="Morena Cebra">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="URL_IMAGEN_REAL_MORENA_CEBRA" alt="Morena Cebra Real">
+            </div>
+            <div class="mySlides fade">
+                <img src="https://github.com/Sjimenezp7/Colegio-CBD-Museo-Las-ramas-rotas-de-la-vida/blob/main/imagenes/morena_cebra_reciclada.jpg?raw=true" alt="Morena Cebra Reciclada">
+            </div>
+        </div>
         <h4>Morena Cebra</h4>
-        <a href="Morena cebra.html" class="button">Ver más</a>
+        <a href="morena-cebra.html" class="button">Ver más</a>
     </div>
+
+    <!-- Ficha Técnica 15: Oso Perezoso -->
     <div class="animal-card">
-        <img src="https://github.com/Sjimenezp7/Colegio-CBD-Museo-Las-ramas-rotas-de-la-vida/blob/main/imagenes/oso%20perezoso.jpg?raw=true" alt="Oso Perezoso">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="URL_IMAGEN_REAL_OSO_PEREZOSO" alt="Oso Perezoso Real">
+            </div>
+            <div class="mySlides fade">
+                <img src="https://github.com/Sjimenezp7/Colegio-CBD-Museo-Las-ramas-rotas-de-la-vida/blob/main/imagenes/oso_perezoso_reciclado.jpg?raw=true" alt="Oso Perezoso Reciclado">
+            </div>
+        </div>
         <h4>Oso Perezoso</h4>
-        <a href="Oso perezoso.html" class="button">Ver más</a>
+        <a href="oso-perezoso.html" class="button">Ver más</a>
     </div>
+
+    <!-- Ficha Técnica 16: Águila Solitaria -->
     <div class="animal-card">
-        <img src="https://github.com/Sjimenezp7/Colegio-CBD-Museo-Las-ramas-rotas-de-la-vida/blob/main/imagenes/aguila.jpg?raw=true" alt="Águila Solitaria">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="URL_IMAGEN_REAL_AGUILA_SOLITARIA" alt="Águila Solitaria Real">
+            </div>
+            <div class="mySlides fade">
+                <img src="https://github.com/Sjimenezp7/Colegio-CBD-Museo-Las-ramas-rotas-de-la-vida/blob/main/imagenes/aguila_reciclada.jpg?raw=true" alt="Águila Solitaria Reciclada">
+            </div>
+        </div>
         <h4>Águila Solitaria</h4>
-        <a href="Aguila-solitaria.html" class="button">Ver más</a>
+        <a href="aguila-solitaria.html" class="button">Ver más</a>
     </div>
 </div>
 
@@ -205,9 +343,28 @@
         <p>Gracias a talleres de interpretación ambiental, los jóvenes han fortalecido sus conocimientos sobre los ecosistemas marinos y terrestres, enfocándose en nuevas esculturas que representan la fauna y flora de estos hábitats. Estas actividades han contribuido a la concienciación sobre la conservación de la naturaleza y han fortalecido el vínculo de la comunidad educativa con la protección de los recursos naturales, promoviendo la sostenibilidad a través del arte y el reciclaje.</p>
     </div>
 </div>
-
+    
 <!-- Botón de regreso a la página principal -->
 <a href="index.html" class="back-button">Volver al Inicio</a>
 
+<script>
+    // Script para el carrusel de imágenes
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let slides = document.getElementsByClassName("mySlides");
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1; }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 3000); // Cambia la imagen cada 3 segundos
+    }
+</script>
+
+</body>
+</html>
 </body>
 </html>
