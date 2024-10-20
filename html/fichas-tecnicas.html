@@ -56,7 +56,7 @@
             transition: transform 0.3s ease;
         }
         .animal-card:hover img {
-            transform: scale(0.8); /* Reducimos la imagen para que se vea completa */
+            transform: scale(1); /* Mantener la imagen a tamaño original */
         }
         .animal-card h4 {
             margin-top: 0.5rem;
@@ -84,7 +84,6 @@
         }
     </style>
 </head>
-
 <body>
 
     <header>
@@ -256,7 +255,7 @@
     <!-- Botón de regreso a la página principal -->
     <a href="index.html" class="back-button">Volver al Inicio</a>
 
-   <script>
+  <script>
     // Script para el carrusel de imágenes
     document.addEventListener("DOMContentLoaded", function () {
         const carousels = document.querySelectorAll(".carousel");
@@ -271,6 +270,5 @@
         });
     });
 </script>
-
 </body>
 </html>
