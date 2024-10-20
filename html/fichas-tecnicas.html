@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +15,6 @@
             padding: 2rem;
             text-align: center;
         }
-
         header {
             background-color: rgba(40, 167, 69, 0.9);
             color: white;
@@ -26,25 +24,21 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             margin-bottom: 1rem;
         }
-
         h1 {
             font-family: 'Montserrat', sans-serif;
             font-size: 2.5rem;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
             animation: float 2s ease-in-out infinite;
         }
-
         @keyframes float {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-10px); }
         }
-
         .animal-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             grid-gap: 20px;
         }
-
         .animal-card {
             background-color: rgba(255, 255, 255, 0.8);
             padding: 1rem;
@@ -54,12 +48,10 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             overflow: hidden;
         }
-
         /* Efecto hover para agrandar la imagen */
         .animal-card:hover img {
-            transform: scale(1.5); /* Aumenta el tamaño de la imagen */
+            transform: scale(1.2); /* Aumenta el tamaño de la imagen al pasar el cursor */
         }
-
         .animal-card img {
             width: 100%;
             height: 200px;
@@ -67,14 +59,12 @@
             border-radius: 10px;
             transition: transform 0.3s ease; /* Efecto de transición suave */
         }
-
         .carousel {
             position: relative;
             width: 100%;
             height: 200px;
             overflow: hidden;
         }
-
         .carousel img {
             position: absolute;
             top: 0;
@@ -85,21 +75,17 @@
             transition: transform 1s ease;
             border-radius: 10px;
         }
-
         .carousel img.active {
             left: 0;
             transform: translateX(0);
         }
-
         .carousel img.previous {
             transform: translateX(-100%);
         }
-
         .animal-card h4 {
             margin-top: 0.5rem;
             font-family: 'Montserrat', sans-serif;
         }
-
         .button {
             background-color: #007BFF;
             color: white;
@@ -111,11 +97,9 @@
             display: inline-block;
             transition: background-color 0.3s ease;
         }
-
         .button:hover {
             background-color: #0056b3;
         }
-
         .back-button {
             background-color: #28a745;
             color: white;
@@ -127,7 +111,6 @@
             display: inline-block;
             transition: background-color 0.3s ease;
         }
-
         .back-button:hover {
             background-color: #218838;
         }
@@ -304,22 +287,20 @@
 
 <!-- Botón de regreso al index -->
 <a href="index.html" class="back-button">Volver al Inicio</a>
-  <script>
+ <script>
         // Lógica para la transición de imágenes con deslizamiento
         document.querySelectorAll('.carousel').forEach(carousel => {
-            const images = carousel.querySelectorAll('img');
+            let images = carousel.querySelectorAll('img');
             let currentIndex = 0;
 
             setInterval(() => {
                 images[currentIndex].classList.remove('active');
-                images[currentIndex].classList.add('previous');
-                currentIndex = (currentIndex + 1) % images.length;
-                images[currentIndex].classList.remove('previous');
-                images[currentIndex].classList.add('active');
-            }, 3000); // Cambiar imagen cada 3 segundos
+                let nextIndex = (currentIndex + 1) % images.length;
+                images[nextIndex].classList.add('active');
+                currentIndex = nextIndex;
+            }, 3000); // Cambia cada 3 segundos
         });
     </script>
 
 </body>
-
 </html>
