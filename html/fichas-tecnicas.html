@@ -53,6 +53,7 @@
             position: relative;
             width: 100%;
             height: 200px; /* Ajusta la altura para que las imágenes encajen uniformemente */
+            overflow: hidden;
         }
         .carousel img {
             width: 100%;
@@ -61,11 +62,15 @@
             position: absolute;
             top: 0;
             left: 0;
-            transition: opacity 1s ease;
+            transition: transform 0.5s ease, opacity 1s ease;
             opacity: 0;
         }
         .carousel img.active {
             opacity: 1;
+        }
+        /* Efecto de alejar la imagen al pasar el cursor */
+        .carousel:hover img {
+            transform: scale(0.8); /* Hace que la imagen se "aleje" */
         }
         .animal-card h4 {
             margin-top: 0.5rem;
@@ -263,8 +268,7 @@
 
     <!-- Botón de regreso a la página principal -->
     <a href="index.html" class="back-button">Volver al Inicio</a>
-
-  <script>
+<script>
     // Script para el carrusel de imágenes
     document.addEventListener("DOMContentLoaded", function () {
         const carousels = document.querySelectorAll(".carousel");
