@@ -55,9 +55,9 @@
             overflow: hidden;
         }
 
-        .animal-card:hover {
-            transform: scale(1.1); /* Más expansión en el hover */
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        /* Efecto hover para agrandar la imagen */
+        .animal-card:hover img {
+            transform: scale(1.5); /* Aumenta el tamaño de la imagen */
         }
 
         .animal-card img {
@@ -65,7 +65,7 @@
             height: 200px;
             object-fit: cover;
             border-radius: 10px;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease; /* Efecto de transición suave */
         }
 
         .carousel {
@@ -133,6 +133,7 @@
         }
     </style>
 </head>
+
 <body>
 
 <header>
@@ -303,7 +304,7 @@
 
 <!-- Botón de regreso al index -->
 <a href="index.html" class="back-button">Volver al Inicio</a>
- <script>
+  <script>
         // Lógica para la transición de imágenes con deslizamiento
         document.querySelectorAll('.carousel').forEach(carousel => {
             const images = carousel.querySelectorAll('img');
@@ -321,4 +322,4 @@
 
 </body>
 
-</html>    
+</html>
