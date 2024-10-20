@@ -55,19 +55,58 @@
             overflow: hidden;
             position: relative;
             height: 350px;
-            width: 280px; /* Ajusté el tamaño para que se vea mejor */
-        }
-
-        .animal-card:hover img {
-            transform: scale(0.9);
+            width: 280px; /* Ajuste de tamaño */
         }
 
         .animal-card img {
             width: 100%;
-            height: 200px; /* Ajusté la altura para que se vea mejor */
+            height: 200px; /* Ajuste de la altura de las imágenes */
             object-fit: cover;
             border-radius: 10px;
             transition: transform 0.3s ease;
+        }
+
+        .animal-card h4 {
+            margin-top: 0.5rem;
+            font-family: 'Montserrat', sans-serif;
+            background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro para que el texto resalte */
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .button {
+            background-color: #007BFF;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1rem;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+            position: relative;
+            margin-top: 10px; /* Despego el botón del texto */
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        .back-button {
+            background-color: #28a745;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin: 1rem auto;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #218838;
         }
 
         .carousel {
@@ -94,51 +133,6 @@
 
         .carousel img.previous {
             left: -100%;
-        }
-
-        .animal-card h4 {
-            margin: 0.5rem 0;
-            font-family: 'Montserrat', sans-serif;
-            background-color: rgba(0, 0, 0, 0.6);
-            color: white;
-            padding: 5px 10px;
-            border-radius: 5px;
-            position: relative;
-            margin-top: 10px;
-        }
-
-        .button {
-            background-color: #007BFF;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 1rem;
-            display: inline-block;
-            transition: background-color 0.3s ease;
-            position: relative;
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
-
-        .button:hover {
-            background-color: #0056b3;
-        }
-
-        .back-button {
-            background-color: #28a745;
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 1.2rem;
-            margin: 1rem auto;
-            display: inline-block;
-            transition: background-color 0.3s ease;
-        }
-
-        .back-button:hover {
-            background-color: #218838;
         }
     </style>
 </head>
@@ -312,7 +306,7 @@
 </div>
     <!-- Botón de regreso a la página principal -->
     <a href="index.html" class="back-button">Volver al Inicio</a>
- <script>
+<script>
         // Script para el carrusel de imágenes con efecto deslizante
         document.querySelectorAll('.carousel').forEach(carousel => {
             let images = carousel.querySelectorAll('img');
