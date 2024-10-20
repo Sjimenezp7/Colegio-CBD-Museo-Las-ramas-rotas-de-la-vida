@@ -97,10 +97,17 @@
         }
 
         .animal-card h4 {
-            margin-top: 0.5rem;
+            margin: 0.5rem 0 0 0; /* Ajusta el margen para mayor separación */
             font-family: 'Montserrat', sans-serif;
             position: relative;
             font-size: 1.2rem;
+            background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro para que se vea mejor el texto */
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            text-align: center;
+            width: 100%;
+            bottom: 50px;
         }
 
         .button {
@@ -142,6 +149,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <header>
@@ -312,7 +320,7 @@
     <!-- Botón de regreso a la página principal -->
     <a href="index.html" class="back-button">Volver al Inicio</a>
 
-     <script>
+   <script>
         // Script para el carrusel de imágenes con efecto deslizante
         document.querySelectorAll('.carousel').forEach(carousel => {
             let images = carousel.querySelectorAll('img');
