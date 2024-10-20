@@ -56,7 +56,7 @@
         }
 
         .animal-card:hover {
-            transform: scale(1.05);
+            transform: scale(1.1); /* Más expansión en el hover */
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
 
@@ -68,30 +68,31 @@
             transition: transform 0.3s ease;
         }
 
-        .animal-card:hover img {
-            transform: scale(1.1); /* Efecto Hover para ampliar imagen */
-        }
-
         .carousel {
             position: relative;
             width: 100%;
             height: 200px;
+            overflow: hidden;
         }
 
         .carousel img {
             position: absolute;
             top: 0;
-            left: 0;
+            left: 100%;
             width: 100%;
             height: 100%;
             object-fit: cover;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
+            transition: transform 1s ease;
             border-radius: 10px;
         }
 
         .carousel img.active {
-            opacity: 1;
+            left: 0;
+            transform: translateX(0);
+        }
+
+        .carousel img.previous {
+            transform: translateX(-100%);
         }
 
         .animal-card h4 {
@@ -132,7 +133,6 @@
         }
     </style>
 </head>
-
 <body>
 
 <header>
@@ -303,15 +303,17 @@
 
 <!-- Botón de regreso al index -->
 <a href="index.html" class="back-button">Volver al Inicio</a>
-<script>
-        // Lógica para la transición de imágenes
+ <script>
+        // Lógica para la transición de imágenes con deslizamiento
         document.querySelectorAll('.carousel').forEach(carousel => {
             const images = carousel.querySelectorAll('img');
             let currentIndex = 0;
 
             setInterval(() => {
                 images[currentIndex].classList.remove('active');
+                images[currentIndex].classList.add('previous');
                 currentIndex = (currentIndex + 1) % images.length;
+                images[currentIndex].classList.remove('previous');
                 images[currentIndex].classList.add('active');
             }, 3000); // Cambiar imagen cada 3 segundos
         });
@@ -319,4 +321,4 @@
 
 </body>
 
-</html>
+</html>    
