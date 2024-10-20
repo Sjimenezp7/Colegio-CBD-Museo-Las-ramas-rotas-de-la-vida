@@ -46,29 +46,20 @@
             border: 1px solid #ddd;
             border-radius: 10px;
             text-align: center;
-            width: 200px;
+            width: 250px; /* Aumentamos el tamaño de las casillas */
+            height: 320px; /* Ajustamos la altura para evitar cortes */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
         }
         .animal-card:hover {
             transform: scale(1.05);
         }
-        .slideshow-container {
-            position: relative;
-            width: 100%;
-            height: 250px;
-            overflow: hidden;
-        }
         .animal-card img {
             border-radius: 10px;
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            height: auto;
             opacity: 0;
             transition: opacity 1s ease-in-out;
-            position: absolute;
-            top: 0;
-            left: 0;
         }
         .animal-card img.show {
             opacity: 1;
@@ -170,7 +161,7 @@
     <div class="animal-card">
         <div class="slideshow-container">
             <img class="mySlides lagarto show" src="https://github.com/Sjimenezp7/Colegio-CBD-Museo-Las-ramas-rotas-de-la-vida/blob/main/imagenes%20Museo/lagartopunteado.jpg?raw=true" alt="Lagarto Punteado de Mal Pelo Real">
-            <img class="mySlides lagarto" src="https://github.com/Sjimenezp7/Colegio-CBD-Museo-Las-ramas-rotas-de-la-vida/blob/main/imagenes/lagarto.jpg?raw=true" alt="Lagarto Punteado Reciclado">
+            <img class="mySlides lagarto" src="https://github.com/Sjimenezp7/Colegio-CBD-Museo-Las-ramas-rotas-de-la-vida/blob/main/imagenes/lagarto.jpg?raw=true" alt="Lagarto Punteado de Mal Pelo Reciclado">
         </div>
         <h4>Lagarto Punteado de Mal Pelo</h4>
         <a href="lagarto-punteado.html" class="button">Ver más</a>
@@ -199,7 +190,7 @@
     <!-- Ficha Técnica 10: Tingua Azul -->
     <div class="animal-card">
         <div class="slideshow-container">
-            <img class="mySlides tingua show" src="https://github.com/Sjimenezp7/Colegio-CBD-Museo-Las-ramas-rotas-de-la-vida/blob/main/imagenes%20Museo/tingua.jpg?raw=true" alt="Tingua Azul Real">
+            <img class="mySlides tingua show" src="https://github.com/Sjimenezp7/Colegio-CBD-Museo-Las-ramas-rotas-de-la-vida/blob/main/imagenes%20Museo/tinguaazul.jpg?raw=true" alt="Tingua Azul Real">
             <img class="mySlides tingua" src="https://github.com/Sjimenezp7/Colegio-CBD-Museo-Las-ramas-rotas-de-la-vida/blob/main/imagenes/tingua.jpg?raw=true" alt="Tingua Azul Reciclada">
         </div>
         <h4>Tingua Azul</h4>
