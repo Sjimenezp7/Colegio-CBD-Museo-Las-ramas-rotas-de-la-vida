@@ -55,7 +55,7 @@
             overflow: hidden;
             position: relative;
             height: 350px;
-            width: 300px;
+            width: 300px; /* Ajusta el tamaño para que sea uniforme */
         }
 
         .animal-card:hover img {
@@ -97,16 +97,16 @@
         }
 
         .animal-card h4 {
-            margin-top: 0.5rem;
             font-family: 'Montserrat', sans-serif;
-            position: relative;
-            bottom: 10px;
+            position: absolute;
+            bottom: 70px; /* Aumentar el espacio para el botón */
             left: 0;
             right: 0;
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(0, 0, 0, 0.6);
             color: white;
-            padding: 5px 0;
-            text-align: center;
+            padding: 0.5rem;
+            margin: 0;
+            font-size: 1.1rem;
         }
 
         .button {
@@ -118,8 +118,12 @@
             font-size: 1rem;
             display: inline-block;
             transition: background-color 0.3s ease;
-            position: relative;
-            margin-top: 10px;
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .button:hover {
@@ -313,7 +317,8 @@
 </div>
     <!-- Botón de regreso a la página principal -->
     <a href="index.html" class="back-button">Volver al Inicio</a>
-<script>
+
+    <script>
         // Script para el carrusel de imágenes con efecto deslizante
         document.querySelectorAll('.carousel').forEach(carousel => {
             let images = carousel.querySelectorAll('img');
