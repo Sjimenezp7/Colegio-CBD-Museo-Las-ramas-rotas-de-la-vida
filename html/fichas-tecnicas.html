@@ -41,7 +41,7 @@
         .animal-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap:50px;
+            gap: 20px;
             justify-items: center;
         }
 
@@ -55,58 +55,19 @@
             overflow: hidden;
             position: relative;
             height: 350px;
-            width: 310px; /* Ajuste de tamaño */
+            width: 300px;
+        }
+
+        .animal-card:hover img {
+            transform: scale(0.9);
         }
 
         .animal-card img {
-            width: 120%;
-            height: 150px; /* Ajuste de la altura de las imágenes */
+            width: 100%;
+            height: 200px;
             object-fit: cover;
             border-radius: 10px;
             transition: transform 0.3s ease;
-        }
-
-        .animal-card h4 {
-            margin-top: 0.5rem;
-            font-family: 'Montserrat', sans-serif;
-            background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro para que el texto resalte */
-            color: white;
-            padding: 5px 10px;
-            border-radius: 5px;
-            position: relative;
-        }
-
-        .button {
-            background-color: #007BFF;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 1rem;
-            display: inline-block;
-            transition: background-color 0.3s ease;
-            position: relative;
-            margin-top: 10px; /* Despego el botón del texto */
-        }
-
-        .button:hover {
-            background-color: #0056b3;
-        }
-
-        .back-button {
-            background-color: #28a745;
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 1.2rem;
-            margin: 1rem auto;
-            display: inline-block;
-            transition: background-color 0.3s ease;
-        }
-
-        .back-button:hover {
-            background-color: #218838;
         }
 
         .carousel {
@@ -133,6 +94,52 @@
 
         .carousel img.previous {
             left: -100%;
+        }
+
+        .animal-card h4 {
+            margin-top: 0.5rem;
+            font-family: 'Montserrat', sans-serif;
+            position: relative;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 5px 0;
+            text-align: center;
+        }
+
+        .button {
+            background-color: #007BFF;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1rem;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+            position: relative;
+            margin-top: 10px;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        .back-button {
+            background-color: #28a745;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin: 1rem auto;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #218838;
         }
     </style>
 </head>
