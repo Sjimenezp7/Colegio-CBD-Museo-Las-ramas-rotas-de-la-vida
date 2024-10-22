@@ -41,7 +41,7 @@
         .animal-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 40px; /* Aumentar el espacio entre las tarjetas */
+            gap: 20px; /* Aumentar el espacio entre las tarjetas */
             justify-items: center;
             margin-bottom: 2rem;
         }
@@ -60,7 +60,7 @@
 
         .animal-card {
             background-color: rgba(255, 255, 255, 0.8);
-            padding: 1.5rem;
+            padding: 1rem;
             border-radius: 10px;
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -68,8 +68,8 @@
             overflow: hidden;
             position: relative;
             width: 100%;
-            max-width: 350px;
-            height: 550px; /* Aumentar la altura de las tarjetas */
+            max-width: 300px; /* Reducir el tamaño del contenedor */
+            height: 400px; /* Ajustar altura de las tarjetas */
         }
 
         .animal-card:hover img {
@@ -78,42 +78,16 @@
 
         .animal-card img {
             width: 100%;
-            height: 350px; /* Aumentar la altura de la imagen */
+            height: 250px; /* Ajustar la altura de la imagen */
             object-fit: cover;
             border-radius: 10px;
             transition: transform 0.3s ease;
         }
 
-        .carousel {
-            position: relative;
-            width: 100%;
-            height: 350px; /* Ajustar la altura de las imágenes */
-            overflow: hidden;
-        }
-
-        .carousel img {
-            position: absolute;
-            top: 0;
-            left: 100%;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: left 1s ease;
-            border-radius: 10px;
-        }
-
-        .carousel img.active {
-            left: 0;
-        }
-
-        .carousel img.previous {
-            left: -100%;
-        }
-
         .animal-card h4 {
             margin-top: 10px;
             font-family: 'Montserrat', sans-serif;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
         }
 
         .button {
