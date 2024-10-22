@@ -41,9 +41,9 @@
         .animal-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 30px; /* Aumentar el espacio entre las tarjetas */
+            gap: 20px; /* Espacio entre tarjetas */
             justify-items: center;
-            margin-bottom: 2rem;
+            padding: 1rem;
         }
 
         @media (max-width: 1024px) {
@@ -67,24 +67,23 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             overflow: hidden;
             width: 100%;
-            max-width: 350px; /* Ajustar el tamaño */
-            height: 450px; /* Ajustar altura para evitar espacios en blanco */
-        }
-
-        .animal-card:hover img {
-            transform: scale(0.95);
+            max-width: 300px; /* Ajuste del ancho máximo */
+            height: 400px; /* Altura de las tarjetas */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .animal-card img {
             width: 100%;
-            height: 275px; /* Ajustar la altura de la imagen */
+            height: 220px; /* Altura ajustada de las imágenes */
             object-fit: cover;
             border-radius: 10px;
             transition: transform 0.3s ease;
         }
 
         .animal-card h4 {
-            margin-top: 10px;
+            margin: 10px 0;
             font-family: 'Montserrat', sans-serif;
             font-size: 1.3rem;
         }
@@ -96,9 +95,8 @@
             border-radius: 5px;
             text-decoration: none;
             font-size: 1rem;
-            display: inline-block;
             transition: background-color 0.3s ease;
-            margin-top: 10px;
+            margin-bottom: 10px;
         }
 
         .button:hover {
@@ -122,6 +120,7 @@
         }
     </style>
 </head>
+
 <body>
 
 
