@@ -38,7 +38,6 @@
             50% { transform: translateY(-10px); }
         }
 
-        /* Diseño del grid para pantallas grandes */
         .animal-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -46,21 +45,18 @@
             justify-items: center;
         }
 
-        /* Ajustes de grid para pantallas medianas (tablets) */
         @media (max-width: 1024px) {
             .animal-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
 
-        /* Ajustes de grid para pantallas pequeñas (móviles) */
         @media (max-width: 600px) {
             .animal-grid {
                 grid-template-columns: 1fr;
             }
         }
 
-        /* Ajustes para espaciado y márgenes */
         .animal-card {
             background-color: rgba(255, 255, 255, 0.8);
             padding: 1rem;
@@ -70,8 +66,9 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             overflow: hidden;
             position: relative;
-            width: 100%; /* Esto permite que se ajuste al 100% de la columna del grid */
-            max-width: 350px; /* Define un máximo de ancho para mantener consistencia */
+            width: 100%;
+            max-width: 350px;
+            height: 350px;
             margin-bottom: 20px;
         }
 
@@ -90,7 +87,7 @@
         .carousel {
             position: relative;
             width: 100%;
-            height: 100%;
+            height: 200px;
             overflow: hidden;
         }
 
@@ -117,7 +114,7 @@
             margin-top: 0.5rem;
             font-family: 'Montserrat', sans-serif;
             position: relative;
-            bottom: 20px;
+            bottom: 10px;
         }
 
         .button {
@@ -154,7 +151,6 @@
         }
     </style>
 </head>
-
 <body>
 
     <header>
