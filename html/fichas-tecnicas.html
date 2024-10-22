@@ -38,6 +38,7 @@
             50% { transform: translateY(-10px); }
         }
 
+        /* Diseño del grid para pantallas grandes */
         .animal-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -45,6 +46,21 @@
             justify-items: center;
         }
 
+        /* Ajustes de grid para pantallas medianas (tablets) */
+        @media (max-width: 1024px) {
+            .animal-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Ajustes de grid para pantallas pequeñas (móviles) */
+        @media (max-width: 600px) {
+            .animal-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Ajustes para espaciado y márgenes */
         .animal-card {
             background-color: rgba(255, 255, 255, 0.8);
             padding: 1rem;
@@ -54,8 +70,9 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             overflow: hidden;
             position: relative;
-            height: 350px;
-            width: 300px; /* Ajusta el tamaño para que sea uniforme */
+            width: 100%; /* Esto permite que se ajuste al 100% de la columna del grid */
+            max-width: 350px; /* Define un máximo de ancho para mantener consistencia */
+            margin-bottom: 20px;
         }
 
         .animal-card:hover img {
@@ -97,16 +114,10 @@
         }
 
         .animal-card h4 {
+            margin-top: 0.5rem;
             font-family: 'Montserrat', sans-serif;
-            position: absolute;
-            bottom: 70px; /* Aumentar el espacio para el botón */
-            left: 0;
-            right: 0;
-            background-color: rgba(0, 0, 0, 0.6);
-            color: white;
-            padding: 0.5rem;
-            margin: 0;
-            font-size: 1.1rem;
+            position: relative;
+            bottom: 20px;
         }
 
         .button {
@@ -118,12 +129,8 @@
             font-size: 1rem;
             display: inline-block;
             transition: background-color 0.3s ease;
-            position: absolute;
+            position: relative;
             bottom: 10px;
-            left: 0;
-            right: 0;
-            margin-left: auto;
-            margin-right: auto;
         }
 
         .button:hover {
