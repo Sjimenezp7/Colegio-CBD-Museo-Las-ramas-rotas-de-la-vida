@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Museo Las Ramas Rotas de la Vida</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <style>
         body {
@@ -36,27 +36,27 @@
             animation: float 2s ease-in-out infinite;
         }
         h2 {
-            font-size: 2.5rem; /* Incremento del tamaño */
+            font-size: 2.5rem;
             margin-top: 0.5rem;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-            animation: float 2s ease-in-out infinite; /* Animación agregada */
+            animation: float 2s ease-in-out infinite;
         }
         section {
             padding: 2rem;
             margin: 2rem auto;
-            background-color: rgba(255, 255, 255, 0.8); /* Fondo con transparencia */
+            background-color: rgba(255, 255, 255, 0.8);
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 80%; /* Hacer que el contenido sea más angosto */
+            width: 80%;
             max-width: 800px;
             text-align: justify;
             animation: slideUp 1s ease-out;
         }
         h3 {
             font-family: 'Pacifico', cursive;
-            font-size: 2.2rem; /* Incremento del tamaño */
-            text-align: center; /* Centramos el título */
-            animation: float 2s ease-in-out infinite; /* Animación agregada */
+            font-size: 2.2rem;
+            text-align: center;
+            animation: float 2s ease-in-out infinite;
         }
         .button, .animal-link {
             background-color: #007BFF;
@@ -86,7 +86,6 @@
             background-color: #218838;
             transform: scale(1.05);
         }
-        /* Centramos el botón de fichas técnicas */
         .animal-link {
             display: block;
             width: fit-content;
@@ -102,12 +101,31 @@
             from { transform: translateY(20px); opacity: 0; }
             to { transform: translateY(0); opacity: 1; }
         }
+        /* Sección de videos */
+        .video-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+        .video-section iframe {
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
         @media (max-width: 768px) {
             h1 {
                 font-size: 3rem;
             }
             h2 {
-                font-size: 2rem; /* Ajuste en móviles */
+                font-size: 2rem;
+            }
+            .video-section iframe {
+                width: 100%;
+                height: 250px;
             }
         }
     </style>
@@ -121,7 +139,7 @@
 
 <section>
     <h3>Información del Museo</h3>
-    <p>El Museo Las Ramas Rotas de la Vida es una iniciativa del Colegio Confederación Brisas del Diamante, creada con el propósito de concienciar a los estudiantes y a la comunidad sobre la importancia de la biodiversidad, el reciclaje y la conservación de especies en peligro de extinción. Este museo educativo se ha convertido en una herramienta fundamental para enseñar a las nuevas generaciones sobre la interacción entre el ser humano y el medio ambiente.</p>
+     <p>El Museo Las Ramas Rotas de la Vida es una iniciativa del Colegio Confederación Brisas del Diamante, creada con el propósito de concienciar a los estudiantes y a la comunidad sobre la importancia de la biodiversidad, el reciclaje y la conservación de especies en peligro de extinción. Este museo educativo se ha convertido en una herramienta fundamental para enseñar a las nuevas generaciones sobre la interacción entre el ser humano y el medio ambiente.</p>
 
     <p>Una característica única del museo es que todas las esculturas de animales exhibidas están hechas exclusivamente con materiales reciclados, como botellas plásticas, papel reciclado, papel craft, icopor, y otros elementos que normalmente se considerarían basura. A través de este enfoque, el museo no solo destaca la relevancia de las especies en peligro, sino también el poder de la reutilización y el reciclaje como herramientas de sostenibilidad.</p>
     
@@ -132,18 +150,17 @@
     <p>Durante el recorrido por el museo, los visitantes pueden admirar de cerca las esculturas de especies en peligro de extinción. Algunas de las piezas más destacadas incluyen al gavilán maromero, una de las aves rapaces más amenazadas de América Latina, y el oso perezoso, cuya población ha disminuido significativamente debido a la deforestación y el tráfico de animales. Además, se presenta la morena verde, un fascinante habitante de los océanos tropicales que está amenazado por la sobrepesca y la degradación de los arrecifes de coral.</p>
 
     <p>La iniciativa del museo no solo busca educar sobre la conservación de la fauna, sino que también invita a reflexionar sobre cómo los materiales desechados pueden cobrar nueva vida a través del reciclaje. Las esculturas son un testimonio de cómo la creatividad y el compromiso ambiental pueden converger para crear un impacto positivo. El Museo Las Ramas Rotas de la Vida es, en esencia, un símbolo de esperanza y acción frente a la crisis ambiental que enfrenta nuestro planeta.</p>
-
-    <!-- Videos incrustados desde Google Drive, uno debajo del otro -->
+    <!-- Sección de videos incrustados desde Google Drive -->
     <div class="video-section">
         <iframe src="https://drive.google.com/file/d/1FRhPHB1AgPPbQnrVGp9SRRwaQcxP7Woh/preview" allow="autoplay"></iframe>
         <iframe src="https://drive.google.com/file/d/1RY93O_3F__YbcjbVrPFKLQuoQuMKQhL6/preview" allow="autoplay"></iframe>
+        <iframe src="https://drive.google.com/file/d/1sEPtkIIMKCMtvlL5Iy-MeNvN42up5-s4/preview" allow="autoplay"></iframe>
     </div>
 </section>
 
 <section>
     <h3>¿Te gustaría conocer más sobre los animales?</h3>
-    <p>Descubre información fascinante sobre las especies, sus hábitats, sus características y mucho más. ¡Acompáñanos en este viaje para aprender más sobre los animales que nos rodean y su importancia para el ecosistema!</p>
-    <!-- Botón para redirigir a la página de las fichas -->
+    <p>Descubre información fascinante sobre las especies, sus hábitats, sus características y mucho más...</p>
     <a href="fichas-tecnicas.html" class="animal-link">Ver más sobre los animales</a>
 </section>
 
