@@ -175,27 +175,25 @@
 </head>
 <body>
 
-<nav>
-    <div class="menu-toggle" id="menuToggle">
-        <div class="menu-bar"></div>
-        <div class="menu-bar"></div>
-        <div class="menu-bar"></div>
-    </div>
-    <ul class="menu" id="menu">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#creditos">Créditos</a></li>
-        <li><a href="#videos">Videos del Profesor</a></li>
-        <li><a href="#tutoriales">Videos Tutoriales</a></li>
-        <li><a href="#fotos">Repositorio de Fotos</a></li>
-    </ul>
+<div class="menu-toggle" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+
+<nav id="menu" class="menu">
+    <a href="#info-proyecto">Información del Proyecto</a>
+    <a href="#info-museo">Información del Museo</a>
+    <a href="#videos">Videos</a>
+    <a href="#fichas-tecnicas">Fichas Técnicas</a>
 </nav>
 
-<header id="inicio">
+<header>
     <h1>Museo Las Ramas Rotas de la Vida</h1>
     <h2>Colegio Confederación Brisas del Diamante - Explorando la Vida Silvestre</h2>
 </header>
 
-<section id="creditos">
+<section id="info-proyecto">
     <h3>Información del Proyecto</h3>
     <p>Este proyecto, titulado "Futuro Techno Animal Ciudad Bolívar," ha sido desarrollado por los estudiantes de séptimo semestre de Ingeniería Mecatrónica de la Universidad ECCI, quienes actualmente cursan la materia de Gestión y Formulación de Proyectos, con el acompañamiento y tutoría de la profesora e ingeniera Paola Andrea Arias Murcia. Durante este tiempo, hemos colaborado con el Centro de Interés de Robótica Confederacionista y el museo "Las Ramas Rotas de la Vida" del Colegio Confederación Brisas del Diamante, con el propósito de fomentar la concienciación sobre la conservación de la biodiversidad y la importancia del reciclaje a través de proyectos innovadores.</p>
 
@@ -213,24 +211,39 @@
         <li>Santiago Jiménez Portela</li>
         <li>Cristian Felipe Díaz Duarte</li>
     </ul>
+
+    <!-- Imagen debajo del texto -->
     <div style="text-align: center; margin-top: 20px;">
         <img src="https://github.com/Sjimenezp7/Colegio-CBD-Museo-Las-ramas-rotas-de-la-vida/blob/main/Figuras%20Impresas/gavilan3D.jpg?raw=true" alt="Imagen del proyecto" style="max-width: 600px; width: 45%; height: auto; border-radius: 10px;">
     </div>
 </section>
 
-<section>
+<section id="info-museo">
     <h3>Información del Museo</h3>
-    <p>El Museo Las Ramas Rotas de la Vida es una iniciativa del Colegio Confederación Brisas del Diamante, creada con el propósito de concienciar a los estudiantes y a la comunidad sobre la importancia de la biodiversidad, el reciclaje y la conservación de especies en peligro de extinción...</p>
-    <div class="video-section">
-        <iframe src="https://drive.google.com/file/d/1FRhPHB1AgPPbQnrVGp9SRRwaQcxP7Woh/preview" allow="autoplay"></iframe>
-        <iframe src="https://drive.google.com/file/d/1_ma7f0zjigF4bf0NmbeycBeGPgrvkv7q/preview" allow="autoplay"></iframe>
-        <iframe src="https://drive.google.com/file/d/1sEPtkIIMKCMtvlL5Iy-MeNvN42up5-s4/preview" allow="autoplay"></iframe>
-    </div>
+    <p>El Museo Las Ramas Rotas de la Vida es una iniciativa del Colegio Confederación Brisas del Diamante, creada con el propósito de concienciar a los estudiantes y a la comunidad sobre la importancia de la biodiversidad, el reciclaje y la conservación de especies en peligro de extinción. Este museo educativo se ha convertido en una herramienta fundamental para enseñar a las nuevas generaciones sobre la interacción entre el ser humano y el medio ambiente.</p>
+
+    <p>Una característica única del museo es que todas las esculturas de animales exhibidas están hechas exclusivamente con materiales reciclados, como botellas plásticas, papel reciclado, papel craft, icopor, y otros elementos que normalmente se considerarían basura. A través de este enfoque, el museo no solo destaca la relevancia de las especies en peligro, sino también el poder de la reutilización y el reciclaje como herramientas de sostenibilidad.</p>
+    
+    <p>Entre las especies representadas en el museo se encuentran animales emblemáticos de distintas regiones, como el oso de anteojos, la tortuga verde, el águila solitaria, el gavilán maromero y la morena verde, entre otros. Cada una de estas especies enfrenta amenazas graves como la pérdida de hábitat, la caza furtiva, la contaminación y el cambio climático. Las esculturas no solo representan a estos animales, sino que también vienen acompañadas de fichas técnicas que describen su estado de conservación, hábitos, y las acciones necesarias para su protección.</p>
+    
+    <p>El museo se destaca por su impacto educativo, ya que los propios estudiantes del Colegio Confederación Brisas del Diamante participan activamente en la creación de las esculturas, investigando sobre los animales y construyendo las piezas con sus propias manos. Este proceso de aprendizaje práctico les permite conectarse profundamente con la problemática ambiental y comprender el valor del reciclaje en la protección del planeta.</p>
+    
+    <p>Durante el recorrido por el museo, los visitantes pueden admirar de cerca las esculturas de especies en peligro de extinción. Algunas de las piezas más destacadas incluyen al gavilán maromero, una de las aves rapaces más amenazadas de América Latina, y el oso perezoso, cuya población ha disminuido significativamente debido a la deforestación y el tráfico de animales. Además, se presenta la morena verde, un fascinante habitante de los océanos tropicales que está amenazado por la sobrepesca y la degradación de los arrecifes de coral.</p>
+
+    <p>La iniciativa del museo no solo busca educar sobre la conservación de la fauna, sino que también invita a reflexionar sobre cómo los materiales desechados pueden cobrar nueva vida a través del reciclaje. Las esculturas son un testimonio de cómo la creatividad y el compromiso ambiental pueden converger para crear un impacto positivo. El Museo Las Ramas Rotas de la Vida es, en esencia, un símbolo de esperanza y acción frente a la crisis ambiental que enfrenta nuestro planeta.</p>
 </section>
 
-<section>
+<!-- Sección de videos incrustados desde Google Drive -->
+<div class="video-section" id="videos">
+    <iframe src="https://drive.google.com/file/d/1FRhPHB1AgPPbQnrVGp9SRRwaQcxP7Woh/preview" allow="autoplay"></iframe>
+    <iframe src="https://drive.google.com/file/d/1_ma7f0zjigF4bf0NmbeycBeGPgrvkv7q/preview" allow="autoplay"></iframe>
+    <iframe src="https://drive.google.com/file/d/1sEPtkIIMKCMtvlL5Iy-MeNvN42up5-s4/preview" allow="autoplay"></iframe>
+</div>
+
+<section id="fichas-tecnicas">
     <h3>¿Te gustaría conocer más sobre los animales?</h3>
     <p>Descubre información fascinante sobre las especies, sus hábitats, sus características y mucho más. ¡Acompáñanos en este viaje para aprender más sobre los animales que nos rodean y su importancia para el ecosistema!</p>
+    <!-- Botón para redirigir a la página de las fichas -->
     <a href="fichas-tecnicas.html" class="animal-link">Ver más sobre los animales</a>
 </section>
 
@@ -238,7 +251,7 @@
     function toggleMenu() {
         const menu = document.getElementById('menu');
         menu.classList.toggle('active');
-    };
+    }
 </script>
 
 </body>
