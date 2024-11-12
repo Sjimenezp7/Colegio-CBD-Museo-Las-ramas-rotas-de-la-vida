@@ -4,60 +4,149 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Videos Tutoriales</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap&family=Pacifico&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
+            background-image: url('https://github.com/Sjimenezp7/Colegio-CBD-Museo-Las-ramas-rotas-de-la-vida/blob/main/fondo.png?raw=true');
+            background-size: cover;
+            background-position: center;
+            color: #333;
         }
-        .container {
-            width: 80%;
-            margin: 2rem auto;
-            padding: 2rem;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        header {
             text-align: center;
+            padding: 2rem;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            margin: 2rem auto;
+            max-width: 80%;
         }
         h1 {
+            font-family: 'Pacifico', cursive;
             font-size: 2.5rem;
             margin-bottom: 1rem;
+            animation: float 2s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .video-section {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 2rem;
+            margin: 2rem auto;
+            border-radius: 10px;
+            max-width: 80%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         iframe {
             width: 100%;
-            max-width: 560px;
-            height: 315px;
+            max-width: 800px;
+            height: 450px;
             border: none;
-            margin-bottom: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .back-button {
+            display: block;
+            margin: 1rem auto;
+            padding: 0.5rem 1rem;
+            background-color: #28a745;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1rem;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+        .back-button:hover {
+            background-color: #218838;
+        }
+        /* Menú lateral */
+        .menu {
+            display: none;
+            flex-direction: column;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            padding: 2rem 1rem;
+            z-index: 1000;
+        }
+        .menu.active {
+            display: flex;
+        }
+        .menu a {
+            color: #333;
+            text-decoration: none;
+            margin: 1rem 0;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+        .menu a:hover {
+            color: #28a745;
+        }
+        .menu-toggle {
+            position: fixed;
+            top: 1rem;
+            left: 1rem;
+            z-index: 1100;
+            cursor: pointer;
+            font-size: 2rem;
+            background: none;
+            border: none;
+            color: #28a745;
         }
     </style>
 </head>
 <body>
-    <!-- Menú -->
-    <nav>
-        <div class="menu-toggle">
-            <div class="menu-bar"></div>
-            <div class="menu-bar"></div>
-            <div class="menu-bar"></div>
-        </div>
-        <ul class="menu">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="fichas-tecnicas.html">Fichas Técnicas</a></li>
-            <li><a href="videos-museo.html">Videos del Museo</a></li>
-            <li><a href="videos-tutoriales.html">Videos Tutoriales</a></li>
-            <li><a href="repositorio-imagenes.html">Repositorio de Imágenes</a></li>
-        </ul>
-    </nav>
 
-    <div class="container">
-        <h1>Videos Tutoriales</h1>
-        <!-- Inserta los iframes de los videos de YouTube -->
-        <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        <iframe src="https://www.youtube.com/embed/VIDEO_ID_4" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<!-- Botón de menú -->
+<button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+<!-- Menú lateral -->
+<nav class="menu" id="menu">
+    <a href="index.html">Inicio</a>
+    <a href="videos-del-museo.html">Videos del Museo</a>
+    <a href="videos-tutoriales.html">Videos Tutoriales</a>
+    <a href="repositorio-imagenes.html">Repositorio de Imágenes</a>
+    <a href="fichas-tecnicas.html">Fichas Técnicas</a>
+</nav>
+
+<header>
+    <h1>Videos Tutoriales</h1>
+</header>
+
+<div class="video-section">
+    <div>
+        <h2>Video Tutorial 1</h2>
+        <p>Descripción del video tutorial 1.</p>
+        <iframe src="https://www.youtube.com/embed/tu_id_de_video" allowfullscreen></iframe>
     </div>
+    <div>
+        <h2>Video Tutorial 2</h2>
+        <p>Descripción del video tutorial 2.</p>
+        <iframe src="https://www.youtube.com/embed/tu_id_de_video" allowfullscreen></iframe>
+    </div>
+    <div>
+        <h2>Video Tutorial 3</h2>
+        <p>Descripción del video tutorial 3.</p>
+        <iframe src="https://www.youtube.com/embed/tu_id_de_video" allowfullscreen></iframe>
+    </div>
+</div>
+
+<a href="index.html" class="back-button">Volver al Inicio</a>
+
+<script>
+    function toggleMenu() {
+        document.getElementById('menu').classList.toggle('active');
+    }
+</script>
+
 </body>
 </html>
