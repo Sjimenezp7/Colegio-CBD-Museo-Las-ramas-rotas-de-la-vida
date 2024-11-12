@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos del Museo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://github.com/Sjimenezp7/Colegio-CBD-Museo-Las-ramas-rotas-de-la-vida/blob/main/fondo.png?raw=true');
+            background-size: cover;
+            background-position: center;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            padding: 2rem;
+        }
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            animation: float 2s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .video-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            padding: 2rem;
+        }
+        iframe {
+            width: 80%;
+            max-width: 800px;
+            height: 450px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            background-color: #28a745;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+        .back-button:hover {
+            background-color: #218838;
+        }
+        /* Menú lateral */
+        .menu {
+            display: none;
+            flex-direction: column;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            padding: 2rem 1rem;
+            z-index: 1000;
+        }
+        .menu.active {
+            display: flex;
+        }
+        .menu a {
+            color: #333;
+            text-decoration: none;
+            margin: 1rem 0;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+        .menu a:hover {
+            color: #28a745;
+        }
+        .menu-toggle {
+            position: fixed;
+            top: 1rem;
+            left: 1rem;
+            z-index: 1100;
+            cursor: pointer;
+            font-size: 2rem;
+            background: none;
+            border: none;
+            color: #28a745;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Botón de menú -->
+<button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+<!-- Menú lateral -->
+<nav class="menu" id="menu">
+    <a href="index.html">Inicio</a>
+    <a href="videos-del-museo.html">Videos del Museo</a>
+    <a href="videos-tutoriales.html">Videos Tutoriales</a>
+    <a href="repositorio-imagenes.html">Repositorio de Imágenes</a>
+    <a href="fichas-tecnicas.html">Fichas Técnicas</a>
+</nav>
+
+<header>
+    <h1>Videos del Museo</h1>
+</header>
+
+<div class="video-section">
+    <!-- Video de YouTube -->
+    <div>
+        <h2>Video 1: Introducción al Museo</h2>
+        <p>Este video presenta una breve introducción al museo "Las Ramas Rotas de la Vida".</p>
+        <iframe src="https://www.youtube.com/embed/tu_id_de_video" allowfullscreen></iframe>
+    </div>
+    
+    <!-- Video de Google Drive -->
+    <div>
+        <h2>Video 2: Visita Guiada</h2>
+        <p>En este video, se realiza una visita guiada por el museo mostrando las piezas destacadas.</p>
+        <iframe src="https://drive.google.com/file/d/tu_id_de_video/preview"></iframe>
+    </div>
+</div>
+
+<a href="index.html" class="back-button">Volver al Inicio</a>
+
+<script>
+    function toggleMenu() {
+        document.getElementById('menu').classList.toggle('active');
+    }
+</script>
+
+</body>
+</html>
