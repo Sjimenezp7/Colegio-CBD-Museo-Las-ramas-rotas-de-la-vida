@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Museo Las Ramas Rotas de la Vida - Videos Tutoriales</title>
+    <title>Videos Tutoriales</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <style>
@@ -28,10 +28,35 @@
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
-        h1, h2 {
+        h1 {
+            font-size: 4rem;
             margin: 0;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
             font-family: 'Montserrat', sans-serif;
+            animation: float 2s ease-in-out infinite;
+        }
+        h2 {
+            font-size: 2.5rem;
+            margin-top: 0.5rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+            animation: float 2s ease-in-out infinite;
+        }
+        section {
+            padding: 2rem;
+            margin: 2rem auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 800px;
+            text-align: justify;
+            animation: slideUp 1s ease-out;
+        }
+        h3 {
+            font-family: 'Pacifico', cursive;
+            font-size: 2.2rem;
+            text-align: center;
+            animation: float 2s ease-in-out infinite;
         }
         nav {
             position: fixed;
@@ -146,20 +171,21 @@
     <h1>Videos Tutoriales</h1>
     <h2>Impresión 3D, Realidad Aumentada y Más</h2>
 </header>
-
-<div class="video-section">
-    <h2>Video 1: Proceso de Realidad Aumentada</h2>
+   
+<section class="video-section">
+    <h3>Video 1: Proceso de Realidad Aumentada</h3>
     <p>Descripción del video de proceso de realidad aumentada.</p>
     <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" allowfullscreen></iframe>
 
-    <h2>Video 2: Preparación de Archivos para Impresión 3D</h2>
+    <h3>Video 2: Preparación de Archivos para Impresión 3D</h3>
     <p>Descripción del video sobre la preparación de archivos para impresión 3D.</p>
     <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" allowfullscreen></iframe>
     
-    <h2>Video 3: Tutorial de Limpieza y Pintado de Figuras</h2>
+    <h3>Video 3: Tutorial de Limpieza y Pintado de Figuras</h3>
     <p>Descripción del video sobre limpieza y pintado de figuras.</p>
     <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" allowfullscreen></iframe>
-</div>
+    
+</section>
 
 <a href="index.html" class="back-button">Volver al Inicio</a>
 
