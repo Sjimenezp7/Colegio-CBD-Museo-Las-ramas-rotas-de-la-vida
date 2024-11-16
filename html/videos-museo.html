@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Museo Las Ramas Rotas de la Vida</title>
+    <title>Videos Tutoriales</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <style>
@@ -16,10 +16,10 @@
             background-position: center;
         }
         header {
-            background-image: url('https://github.com/Sjimenezp7/Colegio-CBD-Museo-Las-ramas-rotas-de-la-vida/blob/main/Canal.png?raw=true');
+            background-image: url('https://github.com/Sjimenezp7/Colegio-CBD-Museo-Las-ramas-rotas-de-la-vida/blob/main/fondo%20negro%20video.jpg?raw=true');
             background-size: cover;
             background-position: center;
-            height: 80vh;
+            height: 60vh;
             color: white;
             display: flex;
             flex-direction: column;
@@ -39,6 +39,23 @@
             font-size: 2.5rem;
             margin-top: 0.5rem;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+            animation: float 2s ease-in-out infinite;
+        }
+        section {
+            padding: 2rem;
+            margin: 2rem auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 800px;
+            text-align: justify;
+            animation: slideUp 1s ease-out;
+        }
+        h3 {
+            font-family: 'Pacifico', cursive;
+            font-size: 2.2rem;
+            text-align: center;
             animation: float 2s ease-in-out infinite;
         }
         nav {
@@ -63,9 +80,9 @@
         .menu a {
             color: #28a745;
             text-decoration: none;
-            font-size: 1rem; /* Tamaño de letra reducido */
+            font-size: 1rem;
             margin: 1rem 0;
-            font-family: 'Montserrat', sans-serif; /* Nueva fuente */
+            font-family: 'Montserrat', sans-serif;
             transition: color 0.3s, transform 0.3s;
         }
         .menu a:hover {
@@ -92,72 +109,39 @@
             height: 3px;
             background-color: white;
             margin: 4px 0;
-            transition: transform 0.3s, background-color 0.3s;
-        }
-        section {
-            padding: 2rem;
-            margin: 2rem auto;
-            background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 80%;
-            max-width: 800px;
-            text-align: justify;
-            animation: slideUp 1s ease-out;
-        }
-        h3 {
-            font-family: 'Pacifico', cursive;
-            font-size: 2.2rem;
-            text-align: center;
-            animation: float 2s ease-in-out infinite;
-        }
-        .button, .animal-link {
-            background-color: #007BFF;
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 1.2rem;
-            margin: 1rem;
-            display: inline-block;
-            transition: background-color 0.3s ease;
-            text-align: center;
-        }
-        .button:hover, .animal-link:hover {
-            background-color: #0056b3;
-        }
-        .animal-link {
-            background-color: #28a745;
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 1.2rem;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-        .animal-link:hover {
-            background-color: #218838;
-            transform: scale(1.05);
-        }
-        .animal-link {
-            display: block;
-            width: fit-content;
-            margin-left: auto;
-            margin-right: auto;
         }
         .video-section {
             display: flex;
             flex-direction: column;
             gap: 20px;
-            align-items: center;
+            padding: 2rem;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            max-width: 900px;
+            margin: 0 auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .video-section iframe {
             width: 100%;
-            max-width: 560px;
-            height: 315px;
+            height: 400px;
             border: none;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .back-button {
+            display: block;
+            text-align: center;
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin: 2rem auto;
+            width: fit-content;
+            transition: background-color 0.3s;
+        }
+        .back-button:hover {
+            background-color: #1e7d34;
         }
         @keyframes float {
             0%, 100% { transform: translateY(0); }
@@ -192,34 +176,42 @@
 <nav id="menu" class="menu">
     <a href="index.html#info-proyecto">Información del Proyecto</a>
     <a href="index.html#info-museo">Información del Museo</a>
-    <a href="videos-museo.html">Videos del Museo</a> <!-- Cambiado -->
+    <a href="videos-museo.html">Videos del Museo</a>
     <a href="videos-tutoriales.html">Videos Tutoriales</a>
     <a href="fichas-tecnicas.html">Fichas Técnicas</a>
-    <a href="repositorio de imagenes.html">Repositorio de Imagenes</a>
+    <a href="repositorio de imagenes.html">Repositorio de Imágenes</a>
 </nav>
+
 <header>
-    <h1>Videos Tutoriales/h1>
-    <h2>Impresion 3D, Realidad Aumentada y Limpieza y Pintado</h2>
+    <h1>Videos Tutoriales</h1>
+    <h2>Impresión 3D, Realidad Aumentada y Más</h2>
 </header>
-<div class="video-section">
-    <h2>Video 1: Proceso De Realidad Aumentada</h2>
-    <p>Descripción del video de introducción.</p>
-    <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" allowfullscreen></iframe>
+   
+<section class="video-section">
+    <h3>Video 1: Proceso de Realidad Aumentada</h3>
+    <p>En este video se muestra cómo se llevó a cabo el proceso de desarrollo de la realidad aumentada aplicada a las figuras del museo. Se explican las herramientas utilizadas y los pasos para integrar la tecnología de realidad aumentada, permitiendo que los visitantes experimenten una interacción única con los animales representados.</p>
+    <iframe src="https://www.youtube.com/embed/a-7rtgEC_ac"allowfullscreen></iframe>
 
-    <h2>Video 2: Preparación Archivos Impresion 3D</h2>
-    <p>Descripción del video de tour.</p>
-    <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" allowfullscreen></iframe>
+    <h3>Video 2: Preparación de Archivos para Impresión 3D</h3>
+    <p> Este video detalla el proceso de preparación de archivos digitales para la impresión 3D de las figuras del museo. Incluye una explicación de cómo se modelan los animales en programas de diseño 3D, cómo se ajustan los parámetros y la importancia de usar material biodegradable para la impresión.</p>
+    <iframe src="https://drive.google.com/file/d/1-2hoEgMt1GDNxM-6W2uQyz5LwRG2w8q2/preview" width="640" height="480" allow="autoplay"></iframe>
+    <h3>Video 3: Tutorial de Limpieza y Pintado de Figuras</h3>
+    <p>En este tutorial, se enseña cómo limpiar y pintar las figuras impresas en 3D para que se vean lo más realistas posible. El video abarca técnicas de pintura y detalles importantes para darle un buen acabado a las esculturas del museo.</p>
+    <iframe src="https://www.youtube.com/embed/7dO7VRI25OM" allowfullscreen></iframe>  
     
-    <h2>Video 3: Tutorial De Limpieza y Pintado De Figuras</h2>
-    <p>Descripción del video de introducció.</p>
-    <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" allowfullscreen></iframe>
-
-</div>
-
-<section id="info-proyecto">
-    <h3>Información del Proyecto</h3>
 </section>
     
+<section id="canal-youtube" style="text-align: center; margin-top: 2rem;">
+    <h3>Canal de YouTube del Museo</h3>
+    <p>El Museo "Las Ramas Rotas de la Vida" cuenta con un canal de YouTube donde se comparten videos informativos, tutoriales y eventos destacados del museo. Te invitamos a suscribirte y ser parte de nuestra comunidad comprometida con la conservación de la biodiversidad y la innovación.</p>
+    <!-- Imagen representativa -->
+    <img src="https://github.com/Sjimenezp7/Colegio-CBD-Museo-Las-ramas-rotas-de-la-vida/blob/main/Canal.png?raw=true" alt="Imagen del canal de YouTube" style="max-width: 600px; width: 80%; height: auto; border-radius: 10px; margin-bottom: 1rem;">
+    <!-- Botón rojo -->
+    <a href="https://www.youtube.com/@MuseoLasRamasRotasDeLaVida" target="_blank" style="display: inline-block; background-color: #FF0000; color: white; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 5px; font-size: 1.2rem; font-family: 'Roboto', sans-serif; transition: background-color 0.3s;">
+        Visita nuestro canal de YouTube
+    </a>
+    
+</section>
 <a href="index.html" class="back-button">Volver al Inicio</a>
 
 <script>
