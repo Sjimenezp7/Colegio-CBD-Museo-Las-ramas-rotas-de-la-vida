@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Videos del Museo</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&family=Pacifico&display=swap" rel="stylesheet">
+    <title>Museo Las Ramas Rotas de la Vida</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -14,122 +15,218 @@
             background-size: cover;
             background-position: center;
         }
-        nav {
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 1rem;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+        header {
+            background-image: url('https://github.com/Sjimenezp7/Colegio-CBD-Museo-Las-ramas-rotas-de-la-vida/blob/main/Canal.png?raw=true');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            color: white;
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            color: #333;
-        }
-        .menu-toggle {
-            cursor: pointer;
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-        }
-        .menu-bar {
-            width: 25px;
-            height: 3px;
-            background-color: #333;
-        }
-        .menu {
-            display: none;
-            flex-direction: column;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 8px;
-            position: absolute;
-            top: 60px;
-            right: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .menu.active {
-            display: flex;
-        }
-        .menu li {
-            margin: 0.5rem 1rem;
-        }
-        .menu a {
-            text-decoration: none;
-            color: #007BFF;
-            font-size: 1.1rem;
-        }
-        h1 {
             text-align: center;
-            font-size: 2.5rem;
-            font-family: 'Pacifico', cursive;
-            animation: float 2s infinite;
-        }
-        .video-section {
-            padding: 2rem;
-            text-align: center;
-        }
-        iframe {
-            width: 80%;
-            max-width: 800px;
-            height: 450px;
-            border: none;
-            margin-bottom: 1.5rem;
-            border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
-        .back-button {
-            display: block;
+        h1 {
+            font-size: 4rem;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            font-family: 'Montserrat', sans-serif;
+            animation: float 2s ease-in-out infinite;
+        }
+        h2 {
+            font-size: 2.5rem;
+            margin-top: 0.5rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+            animation: float 2s ease-in-out infinite;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            width: 250px;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-left: 4px solid #28a745;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 1rem;
+            box-shadow: 4px 0 8px rgba(0, 0, 0, 0.3);
+            transition: left 0.4s ease-in-out;
+            z-index: 1000;
+        }
+        .menu.active {
+            left: 0;
+        }
+        .menu a {
+            color: #28a745;
+            text-decoration: none;
+            font-size: 1rem; /* Tamaño de letra reducido */
+            margin: 1rem 0;
+            font-family: 'Montserrat', sans-serif; /* Nueva fuente */
+            transition: color 0.3s, transform 0.3s;
+        }
+        .menu a:hover {
+            color: #1e7d34;
+            transform: translateX(10px);
+        }
+        .menu-toggle {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background-color: #28a745;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 1100;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .menu-toggle:hover {
+            background-color: #1e7d34;
+            transform: rotate(90deg);
+        }
+        .menu-toggle div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 4px 0;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        section {
+            padding: 2rem;
             margin: 2rem auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 800px;
+            text-align: justify;
+            animation: slideUp 1s ease-out;
+        }
+        h3 {
+            font-family: 'Pacifico', cursive;
+            font-size: 2.2rem;
+            text-align: center;
+            animation: float 2s ease-in-out infinite;
+        }
+        .button, .animal-link {
+            background-color: #007BFF;
+            color: white;
             padding: 1rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin: 1rem;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+            text-align: center;
+        }
+        .button:hover, .animal-link:hover {
+            background-color: #0056b3;
+        }
+        .animal-link {
             background-color: #28a745;
             color: white;
-            text-decoration: none;
+            padding: 1rem 2rem;
             border-radius: 5px;
-            text-align: center;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .animal-link:hover {
+            background-color: #218838;
+            transform: scale(1.05);
+        }
+        .animal-link {
+            display: block;
             width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .video-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+        .video-section iframe {
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         @keyframes float {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-10px); }
         }
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3rem;
+            }
+            h2 {
+                font-size: 2rem;
+            }
+            .video-section iframe {
+                width: 100%;
+                height: 250px;
+            }
+        }
     </style>
 </head>
 <body>
 
-<nav>
-    <div class="menu-toggle">
-        <div class="menu-bar"></div>
-        <div class="menu-bar"></div>
-        <div class="menu-bar"></div>
-    </div>
-    <ul class="menu">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="videos-del-museo.html">Videos del Museo</a></li>
-        <li><a href="videos-tutoriales.html">Videos Tutoriales</a></li>
-        <li><a href="repositorio-imagenes.html">Repositorio de Imágenes</a></li>
-        <li><a href="fichas-tecnicas.html">Fichas Técnicas</a></li>
-    </ul>
-</nav>
+<div class="menu-toggle" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
 
-<h1>Videos del Museo</h1>
+<nav id="menu" class="menu">
+    <a href="index.html#info-proyecto">Información del Proyecto</a>
+    <a href="index.html#info-museo">Información del Museo</a>
+    <a href="videos-museo.html">Videos del Museo</a> <!-- Cambiado -->
+    <a href="videos-tutoriales.html">Videos Tutoriales</a>
+    <a href="fichas-tecnicas.html">Fichas Técnicas</a>
+    <a href="repositorio de imagenes.html">Repositorio de Imagenes</a>
+</nav>
+<header>
+    <h1>Videos Tutoriales/h1>
+    <h2>Impresion 3D, Realidad Aumentada y Limpieza y Pintado</h2>
+</header>
 <div class="video-section">
-    <h2>Video 1: Introducción al Museo</h2>
+    <h2>Video 1: Proceso De Realidad Aumentada</h2>
     <p>Descripción del video de introducción.</p>
     <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" allowfullscreen></iframe>
 
-    <h2>Video 2: Tour del Museo</h2>
+    <h2>Video 2: Preparación Archivos Impresion 3D</h2>
     <p>Descripción del video de tour.</p>
-    <iframe src="https://drive.google.com/file/d/DRIVE_VIDEO_ID/preview" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" allowfullscreen></iframe>
+    
+    <h2>Video 3: Tutorial De Limpieza y Pintado De Figuras</h2>
+    <p>Descripción del video de introducció.</p>
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" allowfullscreen></iframe>
+
 </div>
 
+<section id="info-proyecto">
+    <h3>Información del Proyecto</h3>
+</section>
+    
 <a href="index.html" class="back-button">Volver al Inicio</a>
 
 <script>
-    document.querySelector('.menu-toggle').addEventListener('click', function() {
-        document.querySelector('.menu').classList.toggle('active');
-    });
+    function toggleMenu() {
+        const menu = document.getElementById('menu');
+        menu.classList.toggle('active');
+    }
 </script>
 
 </body>
